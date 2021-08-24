@@ -1,0 +1,30 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* Font Size */
+.fs-tiny {
+  font-size: 12px;
+  line-height: 1.333333333333333;
+}
+
+.fs-small {
+  font-size: 14px;
+  line-height: 1.4285714286;
+}
+
+.fs-base {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.fs-medium {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.fs-large {
+  font-size: 16px;
+  line-height: 1.5;
+}
