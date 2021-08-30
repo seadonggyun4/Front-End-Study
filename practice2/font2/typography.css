@@ -16,15 +16,39 @@ body {
 
 .fs-base {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.5555555556;
 }
 
 .fs-medium {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.fs-large {
-  font-size: 16px;
-  line-height: 1.5;
+/* Font weight */
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-bold {
+  font-weight: 600;
+}
+
+/* color */
+.text-dark {
+  color: #1f2d3d;
+}
+
+.text-primary {
+  color: #3c4858;
+}
+.text-success {
+  color: #13ce66;
+}
+.text-error {
+  color: #ff5216;
 }
