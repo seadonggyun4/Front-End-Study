@@ -84,7 +84,7 @@ a {
   border: 2px solid #fff;
   border-radius: 16px;
 }
-
+/* 웹 화면 연출 */
 @media screen and (min-width: 768px) {
   .banner a {
     height: 80px;
