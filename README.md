@@ -1,5 +1,7 @@
 ﻿# Front-End-Study
 # [Css Project]
+<img width="534" alt="cssproject" src="https://user-images.githubusercontent.com/84368302/131813953-d71cfd95-f9cd-4b53-9f07-da875c08ef63.PNG">
+
 ## 1.CSS Project란?
 * 피그마 파일을 통해 반응형 웹페이지 한개 구현
 ## 2.직접 해본 CSS Project 문제점
