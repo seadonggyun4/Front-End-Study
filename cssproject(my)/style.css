@@ -178,7 +178,7 @@ button {
   color: #2b292d;
   transition: color 250ms ease-out;
 }
-.program-card strong:hover {
+.program-card:hover strong {
   color: #fff;
 }
 
