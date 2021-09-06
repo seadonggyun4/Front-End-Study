@@ -1,4 +1,3 @@
-/* ▼ WHERE YOUR CODE BEGINS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +20,7 @@ body {
 .loading-title {
   margin-bottom: 20px;
   text-align: center;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.333333333333333;
   color: #151b26;
@@ -33,8 +32,8 @@ body {
 
 .progress-bar {
   position: relative;
-  height: 12px;
-  width: 300px;
+  height: 15px;
+  width: 500px;
   border-radius: 100px;
   background-color: #e5eaef;
   overflow: hidden;
@@ -45,13 +44,13 @@ body {
   top: 0;
   left: 0;
   width: 0;
-  height: 12px;
+  height: 15px;
   border-radius: 100px;
   background-color: #13ce66;
   animation-name: loading-bar;
-  animation-duration: 3000ms;
+  animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes flicker {
@@ -68,12 +67,17 @@ body {
     width: 0;
     opacity: 1;
   }
-  80% {
-    width: 100%;
+  50% {
     opacity: 1;
+    background-color: #0093e9;
   }
-  100% {
+  85% {
+    opacity: 1;
+    background-color: #ff9a8b;
+  }
+  to {
     width: 100%;
     opacity: 0;
+    background-color: #ff9a8b;
   }
 }
