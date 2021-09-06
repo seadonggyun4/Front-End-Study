@@ -3,7 +3,7 @@
 <img width="534" alt="cssproject" src="https://user-images.githubusercontent.com/84368302/131813953-d71cfd95-f9cd-4b53-9f07-da875c08ef63.PNG">
 
 ## 1.CSS Project란?
-* 피그마 파일을 통해 반응형 웹페이지 한개 구현
+* 피그마 파일을 통해 반응형 웹페이지 구현
 ## 2.직접 해본 CSS Project 문제점
 1.태그 hover 타겟팅 범위 확장 <br/>
 2.반응형으로 이미지를 감췄다 나타나게 하는법 <br/>
