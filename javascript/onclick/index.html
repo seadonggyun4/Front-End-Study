@@ -8,22 +8,13 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="alert-box blue" id="alert">Alert 박스</div>
-    <button
-      onclick="document.getElementById('alert').style.display = 'block';"
-      type="button"
-    >
-      버튼
-    </button>
-    <button
-      onclick="document.getElementById('alert').style.display = 'none'; "
-      type="button"
-    >
-      닫기
-    </button>
-    <div class="alert-box green"></div>
-    <div class="alert-box yellow"></div>
-    <div class="alert-box red"></div>
+    <div class="alert-box blue" id="alert">
+      <p id="alert-text">Alert 박스</p>
+      <button id="close" type="button">X</button>
+    </div>
+    <!-- //open 이란 함수는 이미 있는함수 -->
+    <button onclick="Btn('아이디')" type="">아이디 알림</button>
+    <button onclick="Btn('비번')" type="button">비번 알림</button>
     <script src="./onclick.js"></script>
   </body>
 </html>
