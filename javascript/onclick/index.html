@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="alert-box blue" id="alert">Alert 박스</div>
+    <button
+      onclick="document.getElementById('alert').style.display = 'block';"
+      type="button"
+    >
+      버튼
+    </button>
+    <button
+      onclick="document.getElementById('alert').style.display = 'none'; "
+      type="button"
+    >
+      닫기
+    </button>
+    <div class="alert-box green"></div>
+    <div class="alert-box yellow"></div>
+    <div class="alert-box red"></div>
     <script src="./onclick.js"></script>
   </body>
 </html>
