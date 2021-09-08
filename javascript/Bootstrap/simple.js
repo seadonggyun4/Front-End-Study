@@ -8,7 +8,8 @@
 //   });
 //jQuery 로 모달창 띄우기
 $(".logbtn").on("click", function () {
-  //fadeIn -> 서서히 나타나는 함수
+  //if 조건식
+  //input 값을 가져오는 방법
   $(".black-background").fadeIn();
 });
 
@@ -27,3 +28,13 @@ $(".closebtn").on("click", function () {
 $(".nav-sub-button").on("click", function () {
   $(".nav-sub").slideToggle();
 });
+
+//form 창 비워져 있으면 전송안되게 제한 하는 함수
+$("form").on("submit", function (e) {
+  if ($("input").val() == "") {
+    e.preventDefault();
+    alert("입력란이 비어있습니다.");
+  }
+});
+
+//삼육구게임 기본!
