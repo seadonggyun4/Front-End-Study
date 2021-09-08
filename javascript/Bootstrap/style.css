@@ -1,0 +1,23 @@
+.main-background {
+  background-image: url(./marek-piwnicki-FDLpSx_cl9g-unsplash.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+.black-background {
+  z-index: 5;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.white-background {
+  background: #fff;
+  margin: 100px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+}
