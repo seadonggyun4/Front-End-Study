@@ -26,6 +26,10 @@
   width: 80%;
   border-radius: 10px;
 }
+.white-background p {
+  display: none;
+  color: red;
+}
 /* 상단메뉴 */
 .nav-menu {
   display: flex;
