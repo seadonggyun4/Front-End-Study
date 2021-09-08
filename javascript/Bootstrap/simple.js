@@ -15,3 +15,15 @@ $(".logbtn").on("click", function () {
 $(".closebtn").on("click", function () {
   $(".black-background").fadeOut();
 });
+
+//기본js로 nav창 띄우기
+// document
+//   .getElementsByClassName("nav-sub-button")[0]
+//   .addEventListener("click", function () {
+//     document.getElementsByClassName("nav-sub")[0].style.display = "block";
+//   });
+
+//jQuery로 창 띄우기
+$(".nav-sub-button").on("click", function () {
+  $(".nav-sub").slideToggle();
+});

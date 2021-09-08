@@ -1,16 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .main-background {
+  border-radius: 0px;
   background-image: url(./marek-piwnicki-FDLpSx_cl9g-unsplash.jpg);
   background-size: cover;
   color: #fff;
 }
-
+/* 모달창 */
 .black-background {
   z-index: 5;
   position: fixed;
   display: none;
   width: 100%;
   height: 100%;
-  border-radius: 0px;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -20,4 +25,18 @@
   padding: 20px;
   width: 80%;
   border-radius: 10px;
+}
+/* 상단메뉴 */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-sub {
+  display: none;
+}
+.nav-sub-button {
+  cursor: pointer;
 }
