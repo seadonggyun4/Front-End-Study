@@ -101,12 +101,18 @@ $("#game").on("submit", function game() {
 //캐러셀
 var 지금보이는사진 = 1;
 $(".slide-next").on("click", function () {
-  if (지금보이는사진 == 1) {
-    $(".slide-container").addClass("slide-undernext");
-    지금보이는사진 = 2;
-  } else if (지금보이는사진 == 2) {
-    $(".slide-container").addClass("slide-undernext2");
-  }
+  $(".slide-container").css(
+    "transform",
+    "translateX(-" + 지금보이는사진 + "00vw)"
+  );
+  지금보이는사진 = 지금보이는사진 + 1;
+});
+var 지금보이는사진2 = 1;
+$(".slide-back").on("click", function () {
+  $(".slide-container").css(
+    "transform",
+    "translateX(" + 지금보이는사진2 + "00vw)"
+  );
 });
 
 $(".slide-1").on("click", function () {

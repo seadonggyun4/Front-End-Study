@@ -79,6 +79,12 @@
   right: 0;
 }
 
+.slide-back {
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
+
 .slide-pluse {
   transform: translateX(200vw);
 }
