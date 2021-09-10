@@ -48,19 +48,42 @@ $(".nav-sub-button").on("click", function () {
 });
 //===================================================================================================================================
 //form 창 email,password 비워져 있으면 전송안되게 제한 하는 함수
-// $("form").on("submit", function (e) {
-//   if ($("#email").val() == "" && $("#password").val() == "") {
-//     e.preventDefault();
-//     $("#email-alert").show();
-//     $("#password-alert").show();
-//   } else if ($("#email").val() == "") {
-//     e.preventDefault();
-//     $("#email-alert").show();
-//   } else if ($("#password").val() == "") {
-//     e.preventDefault();
-//     $("#password-alert").show();
-//   }
-// });
+$("form").on("submit", function (e) {
+  // if ($("#email").val() == "" && $("#password").val() == "") {
+  //   e.preventDefault();
+  //   $("#email-alert").show();
+  //   $("#password-alert").show();
+  // } else if ($("#email").val() == "") {
+  //   e.preventDefault();
+  //   $("#email-alert").show();
+  // } else if ($("#password").val() == "") {
+  //   e.preventDefault();
+  //   $("#password-alert").show();
+  // }
+  var 입력한이메일 = $("#email").val();
+  var 입력한비밀번호 = $("#password").val();
+
+  if (
+    /^(([^<>()[].,;:s@"]+(.[^<>()[].,;:s@"]+)*)|(".+"))@(([^<>().,;s@"]+.{0,1})+([^<>().,;:s@"]{2,}|[d.]+))$/.test(
+      입력한이메일
+    ) == false
+  ) {
+    e.preventDefault();
+    $("#email-alert").show();
+  } else if (입력한이메일 == "") {
+    e.preventDefault();
+    $("#email-alert").show();
+  }
+
+  if (/^[A-Za-z0-9]{6,12}$/.test(입력한비밀번호) == false) {
+    e.preventDefault();
+    $("#password-alert").show();
+  } else if (입력한비밀번호 == "") {
+    e.preventDefault();
+    $("#password-alert").show();
+  }
+});
+
 //===================================================================================================================================
 //삼육구게임 기본!
 // 먼저 input값과 버튼을 연결
@@ -73,4 +96,27 @@ $("#game").on("submit", function game() {
   } else {
     console.log("통과");
   }
+});
+//===================================================================================================================================
+//캐러셀
+var 지금보이는사진 = 1;
+$(".slide-next").on("click", function () {
+  if (지금보이는사진 == 1) {
+    $(".slide-container").addClass("slide-undernext");
+    지금보이는사진 = 2;
+  } else if (지금보이는사진 == 2) {
+    $(".slide-container").addClass("slide-undernext2");
+  }
+});
+
+$(".slide-1").on("click", function () {
+  $(".slide-container").addClass("slide-pluse");
+});
+
+$(".slide-2").on("click", function () {
+  $(".slide-container").addClass("slide-undernext");
+});
+
+$(".slide-3").on("click", function () {
+  $(".slide-container").addClass("slide-undernext2");
 });

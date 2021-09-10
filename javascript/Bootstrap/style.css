@@ -63,3 +63,34 @@
 .nav-sub-button {
   cursor: pointer;
 }
+/* 케러셀 */
+.slide-container {
+  width: 300vw;
+  transition: transform 1s ease-in-out;
+}
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-next {
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+
+.slide-pluse {
+  transform: translateX(200vw);
+}
+
+.slide-undernext {
+  transform: translateX(-100vw);
+}
+
+.slide-undernext2 {
+  transform: translateX(-200vw);
+}
+
+.slide-box img {
+  width: 100%;
+}
