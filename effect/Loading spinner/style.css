@@ -13,7 +13,7 @@ body {
 /* 로딩 rotate 애니메이션 설정 */
 .loader {
   animation-name: rotate; /*애니메이션 이름*/
-  animation-duration: 4s; /*애니메이션 진행시간*/
+  animation-duration: 10s; /*애니메이션 진행시간*/
   animation-iteration-count: infinite; /*애니메이션 진행횟수*/
   height: 50px;
   width: 50px;
@@ -66,6 +66,7 @@ body {
 
 /* ball 애니메이션*/
 /* keyframes 50% 지점일때 두개의 요소가 한 지점에서 만나게 하기위한 애니메이션 */
+
 @keyframes ball1 {
   0% {
     box-shadow: 30px 0 0 #f8b334;
