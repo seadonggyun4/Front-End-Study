@@ -1,0 +1,101 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: #1d1f20;
+  display: flex;
+  justify-content: center;
+}
+
+/* 로딩 rotate 애니메이션 설정 */
+.loader {
+  animation-name: rotate; /*애니메이션 이름*/
+  animation-duration: 4s; /*애니메이션 진행시간*/
+  animation-iteration-count: infinite; /*애니메이션 진행횟수*/
+  height: 50px;
+  width: 50px;
+}
+
+/* 로딩 요소 가상 선택자  */
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+/* 각 가상요소의 애니메이션 설정 */
+/* 가상요소의 그림자로 또 하나의 객체로 표현 */
+.loader:before {
+  animation-name: ball1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-color: #cb2025;
+  box-shadow: 30px 0 0 #f8b334;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation-name: ball2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-color: #00a096;
+  box-shadow: 30px 0 0 #97bf0d;
+}
+/* 로딩 rotate 애니메이션 : 2바퀴 도는 애니메이션*/
+/* 1바퀴 -> 1.2 만큼 커졌다*/
+/* 2바퀴 -> 0.8 원래 크기로 돌아갔다*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.8);
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(0.8);
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+/* ball 애니메이션*/
+/* keyframes 50% 지점일때 두개의 요소가 한 지점에서 만나게 하기위한 애니메이션 */
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #f8b334;
+  }
+  50% {
+    /* 그림자가 다시 합쳐진다.*/
+    box-shadow: 0 0 0 #f8b334;
+    margin-bottom: 0;
+    /* x축으로 15px, y축으로 15px 움직인다.*/
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #97bf0d;
+  }
+  50% {
+    box-shadow: 0 0 0 #97bf0d;
+    margin-top: -20px;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #97bf0d;
+    margin-top: 0;
+  }
+}
