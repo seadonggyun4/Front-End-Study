@@ -28,6 +28,7 @@ section {
 @keyframes animateBgColor {
   0% {
     /* hue-rotate -> 색조회전 */
+    /* 배경색이 지정이 되 있어야 한다. */
     filter: hue-rotate(0deg);
   }
   100% {
@@ -35,7 +36,7 @@ section {
   }
 }
 
-/* 조명만들기 */
+/* 조명1 만들기 */
 section::before {
   content: "";
   position: absolute;
@@ -48,7 +49,7 @@ section::before {
   background: radial-gradient(rgba(255, 0, 0, 0.75), transparent, transparent);
   border-radius: 50%;
 }
-
+/* 조명2 만들기 */
 section::after {
   content: "";
   position: absolute;
@@ -83,6 +84,9 @@ section::after {
   animation-timing-function: steps(7);
   animation-iteration-count: infinite;
 }
+/* text animation */
+/* width가 1px로 줄어들었다 123.16px늘어난다. */
+/* animation 은 steps 속성으로 끊어져서 진행되기때문에 타자치는 효과로 보인다. */
 @keyframes textTyping {
   0%,
   90%,
@@ -91,6 +95,7 @@ section::after {
   }
   30%,
   60% {
+    /* text를 담고있는 요소의 width 길이 */
     width: 123.16px;
   }
 }
