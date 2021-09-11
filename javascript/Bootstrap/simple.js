@@ -42,6 +42,18 @@ $(".closebtn").on("click", function () {
 //     document.getElementsByClassName("nav-sub")[0].style.display = "block";
 //   });
 
+//jQuery로 nav창 변환
+//scroll 이벤트 리스너는 무겁다
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 100) {
+    $(".nav-menu").addClass("nav-black");
+    $(".nav-menu h1").addClass("font-change ");
+  } else if ($(window).scrollTop() < 100) {
+    $(".nav-menu").removeClass("nav-black");
+    $(".nav-menu h1").removeClass("font-change ");
+  }
+});
+
 //jQuery로 nav창 띄우기
 $(".nav-sub-button").on("click", function () {
   $(".nav-sub").slideToggle();
@@ -105,24 +117,31 @@ $(".slide-next").on("click", function () {
     "transform",
     "translateX(-" + 지금보이는사진 + "00vw)"
   );
-  지금보이는사진 = 지금보이는사진 + 1;
-});
-var 지금보이는사진2 = 1;
-$(".slide-back").on("click", function () {
-  $(".slide-container").css(
-    "transform",
-    "translateX(" + 지금보이는사진2 + "00vw)"
-  );
+  if (지금보이는사진 < 2) {
+    지금보이는사진 = 지금보이는사진 + 1;
+  }
 });
 
+$(".slide-back").click(function () {
+  $(".slide-container").css(
+    "transform",
+    "translateX(-" + (지금보이는사진 - 1) + "00vw)"
+  );
+  if (지금보이는사진 > 1) {
+    지금보이는사진 = 지금보이는사진 - 1;
+  }
+});
+
+// transform의 경우, classList.add(클래스명) 보다 인라인(element.style.속성() 의 형식)으로 적용하는 것이 더 잘 동작한다.
 $(".slide-1").on("click", function () {
-  $(".slide-container").addClass("slide-pluse");
+  /* x축의 위치를 해당 값으로 이동시키는 명령어 */
+  $(".slide-container").css("transform", "translateX(0vw)");
 });
 
 $(".slide-2").on("click", function () {
-  $(".slide-container").addClass("slide-undernext");
+  $(".slide-container").css("transform", "translateX(-100vw)");
 });
 
 $(".slide-3").on("click", function () {
-  $(".slide-container").addClass("slide-undernext2");
+  $(".slide-container").css("transform", "translateX(-200vw)");
 });

@@ -51,10 +51,23 @@
 
 /* 상단메뉴 */
 .nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-black {
+  background-color: #000;
+  color: #fff;
 }
 
 .nav-sub {
@@ -63,6 +76,15 @@
 .nav-sub-button {
   cursor: pointer;
 }
+
+.nav-menu h1 {
+  transition: font-size 500ms ease-in-out;
+}
+
+.font-change {
+  font-size: 1rem;
+}
+
 /* 케러셀 */
 .slide-container {
   width: 300vw;
@@ -83,18 +105,6 @@
   position: absolute;
   top: 45%;
   left: 0;
-}
-
-.slide-pluse {
-  transform: translateX(200vw);
-}
-
-.slide-undernext {
-  transform: translateX(-100vw);
-}
-
-.slide-undernext2 {
-  transform: translateX(-200vw);
 }
 
 .slide-box img {
