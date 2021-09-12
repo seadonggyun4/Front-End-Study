@@ -145,3 +145,17 @@ $(".slide-2").on("click", function () {
 $(".slide-3").on("click", function () {
   $(".slide-container").css("transform", "translateX(-200vw)");
 });
+//===================================================================================================================================
+//탭 구현
+//for 반복문 사용
+//length함수는 해당요소 개수를 파악한다.
+for (let i = 0; i < $(".tab-button").length; i++) {
+  $(".tab-button")
+    .eq(i)
+    .on("click", function () {
+      $(".tab-button").removeClass("active");
+      $(".tab-content").removeClass("show");
+      $(".tab-button").eq(i).addClass("active");
+      $(".tab-content").eq(i).addClass("show");
+    });
+}
