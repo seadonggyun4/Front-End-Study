@@ -34,6 +34,18 @@ $(".logbtn").on("click", function () {
 $(".closebtn").on("click", function () {
   $(".black-background").addClass("slide-up");
 });
+//이벤트 버블링 현상이 일어난다.
+// 이벤트 버블링 -> 자식요소에 이벤트가 발생할때 부모요소까지 이벤트의 효과를 받아버리는 현상
+$(".black-background").on("click", function (e) {
+  //e.target -> 지금실제로 클릭한 요소
+  //e.currentTarget, $(this); -> 지금 이벤트리스너가 달린 곳
+  //e.preventDefault(); -> 기본동작 막기
+
+  // $(".black-background") 와 e.currentTarget 은 같은 요소를 가리키지만 jQuery문법과 바닐라js 문법이라는 차이점이 있기 때문에 안된다.
+  if (e.currentTarget == e.target) {
+    $(".black-background").addClass("slide-up");
+  }
+});
 //===================================================================================================================================
 //기본js로 nav창 띄우기
 // document
