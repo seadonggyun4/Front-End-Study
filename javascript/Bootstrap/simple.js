@@ -161,13 +161,36 @@ $(".slide-3").on("click", function () {
 //탭 구현
 //for 반복문 사용
 //length함수는 해당요소 개수를 파악한다.
-for (let i = 0; i < $(".tab-button").length; i++) {
-  $(".tab-button")
-    .eq(i)
-    .on("click", function () {
-      $(".tab-button").removeClass("active");
-      $(".tab-content").removeClass("show");
-      $(".tab-button").eq(i).addClass("active");
-      $(".tab-content").eq(i).addClass("show");
-    });
+
+//[====반복문으로 탭 구현하기=====]
+// for (let i = 0; i < $(".tab-button").length; i++) {
+//   $(".tab-button")
+//     .eq(i)
+//     .on("click", function () {
+//       tabopen(i);
+//     });
+// }
+//[====버블링을 이용해 탭 구현하기=====]
+// 버블링 효과를 이해하고 상위 요소에만 이벤트 리스너를 달아도 동작한다
+// 이벤트 리스너를 줄이면  1.코드 양이 줄고 2.반복문 안쓸수도 있고 3.컴퓨터가 자원의 램을 덜 사용할 수도 있다.
+$(".list").on("click", function (e) {
+  //if문을 쓰면 너무 확장성이 않좋아 진다.
+  //html요소에 몰래 정보를 숨겨두는 dataset이라는 문법을 이용하면된다.
+  tabopen(e.target.dataset.id);
+});
+
+function tabopen(i) {
+  $(".tab-button").removeClass("active");
+  $(".tab-content").removeClass("show");
+  $(".tab-button").eq(i).addClass("active");
+  $(".tab-content").eq(i).addClass("show");
 }
+//===================================================================================================================================
+//데이터 바인딩을 위한 상품 데이터
+var array = ["BMW", 520];
+var object = { brand: "BMW", model: 520 };
+var 자료 = [{ brand: "BMW" }, { model: 520 }];
+
+document.getElementsByClassName("item-title")[0].innerHTML = array[0];
+// $(".item-text").html(object.model);
+$(".item-text").html(자료[1].model);
