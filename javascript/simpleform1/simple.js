@@ -3,6 +3,7 @@
 //[change는 input, selcet 둘다 가능하다.]
 // [css 속성을 이용해 class를 붙혔다 때며 ui창이 보이고 안보이는것을 조정한다.]
 
+//change는 요소값 변경했을때 발생하는 이벤트
 // $("#option1").on("change", function () {
 //   // 만약에 사용자가 선택한 값이 셔츠라면 ui를 보여준다.
 //   // 만약 #option1의 선택된 값이 == 셔츠이면
@@ -18,16 +19,17 @@
 //================================================================================================================
 
 // [2.css 조작이 아닌 js내에서 html을 하드코딩하는 방법]
-// 변수를 선언한 뒤 `` 를 이용해 html태그를 코딩한다
-// 하드코딩된 값을 적용하려면 append()함수를 사용해 적용
+
 // $("#option1").on("change", function () {
 //   if ($("#option1").val() == "셔츠") {
 //     $("#option2").html("");
+//     // 변수를 선언한 뒤 `` 를 이용해 html태그를 코딩한다
 //     var 탬플릿 = `<option>95</option>
 //     <option>100</option>
 //     <option>105</option>
 //     `;
-
+//     // append() 함수는 선택한 요소의 내용의 끝에 콘텐츠를 추가 한다.
+//     // 하드코딩된 값,변수를을 적용하려면 append()함수를 사용해 적용
 //     $("#option2").append(탬플릿);
 //   }
 // });
@@ -56,6 +58,7 @@
 //     $("#option2").html("");
 
 //     for (i = 0; i < 6; i++) {
+//       //${array[index]}는 최신 js 문법으로 ``내부에 변수를 삽입할수 있는 기술이다.
 //       var 탬플릿 = `<option>${바지사이즈[i]}</option>`;
 //       $("#option2").append(탬플릿);
 //     }
@@ -73,18 +76,22 @@ $("#option1").on("change", function () {
   if ($("#option1").val() == "셔츠") {
     //option2 내부 속성들을 계속해서 초기화 한다.
     $("#option2").html("");
-    for (i = 0; i < 3; i++) {
-      //${array[index]}는 최신 js 문법으로 ``내부에 변수를 삽입할수 있는 기술이다.
-      var 탬플릿 = `<option>${셔츠사이즈[i]}</option>`;
+
+    //forEach-> 왼쪽 array 자료 갯수만큼 반복문을 돌려라
+    //반복문이 인덱스값으로 진행되는게 아니라 배열 내부 값들로 반복되기때문에 배열 내부 값들을 append()함수에 넣는다.
+    셔츠사이즈.forEach(function (i) {
+      var 탬플릿 = `<option>${[i]}</option>`;
       $("#option2").append(탬플릿);
-    }
+    });
   } else if ($("#option1").val() == "바지") {
     //option2 내부 속성들을 계속해서 초기화 한다.
     $("#option2").html("");
 
-    for (i = 0; i < 6; i++) {
-      var 탬플릿 = `<option>${바지사이즈[i]}</option>`;
+    //forEach -> 왼쪽 array 자료 갯수만큼 반복문을 돌려라
+    //반복문이 인덱스값으로 진행되는게 아니라 배열 내부 값들로 반복되기때문에 배열 내부 값들을 append()함수에 넣는다.
+    바지사이즈.forEach(function (i) {
+      var 탬플릿 = `<option>${[i]}</option>`;
       $("#option2").append(탬플릿);
-    }
+    });
   }
 });
