@@ -5,15 +5,16 @@ var text = document.querySelector("h1").innerHTML;
 $("button").on("click", function () {
   //h1tag 초기화
   h1tag.innerHTML = "";
-  // 시간지난후에 실행하는 함수
-  setTimeout(function () {
-    //h1tag 내부 html요소는 = h1tag 의 html + text의1번째 자리
-    h1tag.innerHTML = h1tag.innerHTML + text[0];
-  }, 500);
-  setTimeout(function () {
-    h1tag.innerHTML = h1tag.innerHTML + text[1];
-  }, 1000);
-  setTimeout(function () {
-    h1tag.innerHTML = h1tag.innerHTML + text[2];
-  }, 1500);
+
+  for (let i = 0; i < text.length; i++) {
+    // 시간지난후에 실행하는 함수
+    setTimeout(function () {
+      //h1tag 내부 html요소는 = h1tag 의 html + text의1번째 자리
+      h1tag.innerHTML = h1tag.innerHTML + text[i];
+    }, 500 * i);
+  }
 });
+
+// var -> 재선언 재할당 모두 가능
+// let -> 재할당만 가능
+// conts -> 재선언 재할당 모두 불가능
