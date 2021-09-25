@@ -34,8 +34,12 @@ function 첫로드시실행할거() {
         left: "auto",
       });
 
+      //data 는 HTML:5 에서부터 사용되었으며 특정 데이터를 DOM 요소에 저장해두기 위해 사용된다.
+      // productInBasket 에  basket-list 의 아이디를 넣는다.
       var productInBasket = $(`#basket-list [data-index=${index}]`);
       // length -> 문자열 길이 반환 함수
+      // 만약 productInBasket에 길이가 측정될 경우 해당 index에 일치하는 item이 basket-list에 들어있다는 의미이므로
+      // 처음 basket-list에 들어갈때는 당연히 해당 index에 일치하는 html값이 없으니깐 길이 측정이 안된다.
       if (productInBasket.length) {
         // 중복되는 상품이 있을 경우
         alert("이미 장바구니에 담긴 상품입니다.");
