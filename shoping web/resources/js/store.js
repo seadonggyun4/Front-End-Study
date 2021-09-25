@@ -79,8 +79,9 @@ function 첫로드시실행할거() {
             `);
 
       // 수량 늘렸을때 함수
-
-      //
+      // on("keyup change") ->하나의 요소에서 두개의 이벤트 처리:  input 값에 keyup 이벤트와 change 이벤트 발생했을때
+      // keyup -> 키를 눌렀다 뗄때
+      // change -> 해당 셀렉터 값이 변화 할때
       장바구니상품.find("input[type='number']").on("keyup change", function () {
         // parseInt() -> 문자열을 정수로 바꾸는 함수
         // parseInt(string, n) -> string을 n 진법으로 바꾼다.
@@ -90,31 +91,40 @@ function 첫로드시실행할거() {
         // 계산된 sum을 장바구니 상품 내부 .sum 클래스에 넣는다.
         장바구니상품.find(".sum").text(sum);
 
+        //장바구니 총금액 계산
         setTotalSum();
       });
 
       // 아이템 취소했을때 함수
       장바구니상품.find("button.btn-delete").on("click", function () {
         장바구니상품.remove();
+        //장바구니 총금액 계산
         setTotalSum();
       });
 
       // 장바구니상품 에  하드코딩된 요소를 basket-list 에 append()한다.
       $("#basket-list").append(장바구니상품);
+      //장바구니 총금액 계산
       setTotalSum();
     },
   });
 }
 
-// ============================================================  장바구니 계산 ============================================================
+// ============================================================  장바구니 총 금액 계산 ============================================================
 //장바구니 변동될 때마다 총 금액 계산해주는 기능
 function setTotalSum() {
   var totalSum = 0;
 
+  //each() 함수는 배열과,length속성을 갖는 객체들을 index기준으로 반복할 수 있습니다.
+  // basket-list 내부 요소들중 .sum 의 값들을 반복한다.
   $("#basket-list .sum").each(function () {
+    // parseInt() -> 문자열을 정수로 바꾸는 함수
+    // $(this).text() -> .sum 내부 값
+    // totalSum 에 .sum내부 값들을 계속해서 누적한다.
     totalSum += parseInt($(this).text(), 10);
   });
 
+  //#total-sum 의 값을 totalSum으로 한다.
   $("#total-sum").text(totalSum);
 }
 // ============================================================  ajax &  상품 데이터 바인딩 ============================================================
@@ -160,23 +170,37 @@ function appendProduct(product, index) {
   $("#product-list").append(newItem);
 }
 // ============================================================  상품 구매 ============================================================
-//공식 풀이에선 jquery dialog라는걸 썼지만 꼭 그럴필요는 없습니다.
+
 function openBuyPopup() {
+  // basketList = basket-list 하위 요소들 전부 셀렉트
   var basketList = $("#basket-list *");
+  // !는 부정연산자로 basketList.length가 없다면 실행
   if (!basketList.length) {
     alert("장바구니가 비어있습니다.");
     return;
   }
 
+  // name,address 의 값을 초기화
   $("#name, #address").val("");
+  // [=============== jquery dialog ===============]
+  // alert() -> 브라우저에서 제공하는 팝업창/ 웹상의 레이아웃은 아니고 브라우져의 모달이다.
+  // Dialog() -> jQuery 에서 제공하는 팝업창/ 웹상의 레이아웃이다.
   $("#popup-buy").dialog({
     // autoOpen: false,
     width: 350,
     height: 250,
+    // 모달여부
     modal: true,
+    // 다이얼로그가 open 될때의  설정
     open: function (event, ui) {
       $(event.target).dialog("widget");
     },
+    // 다이얼로그가 hide 될때 설정
+    hide: {
+      effect: "explode",
+      duration: 1000,
+    },
+    //버튼들
     buttons: {
       //구매완료 버튼 누르면 실행할 코드
       구매완료: function () {
@@ -194,31 +218,41 @@ function openBuyPopup() {
   });
 }
 // ============================================================  영수증 생성 ============================================================
+// 영수증 이미지 생성
 function openReceiptPopup() {
-  // 영수증 이미지 생성
+  // canvas 셀렉트
   var cvs = $("#receipt");
+  //  canvas에 자유롭게 내용을 적기위함
   var ctx = cvs[0].getContext("2d");
+  // basket-list의 자식 div의 length를  셀렉트
   var itemLen = $("#basket-list > div").length;
 
+  // 켄버스 크기지정
   cvs.attr({
     width: 500,
     height: 200 + 120 * itemLen,
   });
 
+  // 폰트 설정
   ctx.font = "bold 20px Malgun Gothic";
+  // "영수증" 문자열 생성
   ctx.fillText("영수증", 10, 20);
 
+  // 현재 날자 셀렉트 후 폰트 설정과 함께 날자 문자열 생성
   var date = new Date();
   ctx.font = "bold 14px Malgun Gothic";
   ctx.fillText(date, 10, 50);
 
+  // basket-list의 자식 div 요소들에 each() 반복함수 적용
   $("#basket-list > div").each(function (i) {
+    // basket-list내부 div에서 각각 이름,숫자, 합계, 가격 등을 셀렉트
     var productName = $(this).find(".product-name").text();
     var brandName = $(this).find(".brand-name").text();
     var price = $(this).find(".price").text();
     var number = $(this).find(".number").val();
     var sum = $(this).find(".sum").text();
 
+    // basket-list내부 셀렉트된 요소들을 캔버스에 문자열로 생성
     ctx.fillText(productName, 10, 120 * (i + 1));
     ctx.fillText(brandName, 10, 120 * (i + 1) + 20);
     ctx.fillText(`가격 : ${price}`, 10, 120 * (i + 1) + 40);
