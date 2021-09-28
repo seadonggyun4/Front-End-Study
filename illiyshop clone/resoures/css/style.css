@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pop-up {
+  display: flex;
+  width: 100vw;
+  background-color: rgb(184, 156, 122);
+  color: #fff;
+}
+
+.navL-detail {
+  display: flex;
+}
