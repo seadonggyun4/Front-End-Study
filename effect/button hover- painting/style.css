@@ -46,6 +46,7 @@ body {
   /* cover -> 배경이미지가 요소보다 클때 맞추기 위해  이미지를 줄이는 방법 */
   /* contain- > 배경이미지가 요소보다 작을때 맞추기 위해 이미지를 키우는 방법 */
   background-size: cover;
+  /* transform-origin은 형태를 변경시키는 기준점을 지정한다. */
   transform-origin: left;
   transition: 0.5s;
 }
