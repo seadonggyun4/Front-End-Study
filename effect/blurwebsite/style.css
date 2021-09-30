@@ -20,7 +20,6 @@
 #blur-area {
   position: absolute;
   z-index: 1;
-  /* unblured circle 을 숨기기 위함*/
   top: -100vh;
   left: -100vw;
   width: 200vw;
@@ -28,16 +27,14 @@
   /* backdrop-filter 는 배경에 blure 효과를 준다. */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  /* unblured circle 을 만들기 위함*/
+  /* radail-gradient -> 방사형 그라데이션 */
   -webkit-mask-image: radial-gradient(
     200px at 50% 50%,
     transparent 50%,
     black 100%
   );
   mask-image: radial-gradient(200px at 50% 50%, transparent 50%, black 100%);
-  /* 150 -> mask-image 크기 */
-  /* 50% 50% -> mask-image 위치 값 */
-  /* transparent -> 투명도 */
+
   mix-blend-mode: hue;
   /* mix-blend-mode -> 요소가 겹칠 경우 색상이 어떻게 나타나야 하는지 정의 */
 }
