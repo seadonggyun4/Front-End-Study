@@ -25,6 +25,7 @@
   color: #fff;
   font-size: 100px;
   font-weight: 500;
+  -webkit-box-reflect: below 1px linear-gradient(transparent 50%, #0004);
 }
 
 /* ===  LOGO background === */
@@ -41,6 +42,7 @@
     #515ecf
   );
   border-radius: 54px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0004);
 }
 
 /* ===  LOGO inner white square === */
