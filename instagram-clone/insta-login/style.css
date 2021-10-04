@@ -139,13 +139,27 @@ input {
 }
 
 .login-menu button {
-  margin-top: 70px;
+  z-index: 1;
+  margin-top: 50px;
   width: 200px;
-  height: 30px;
-  background-color: #66c4e3;
+  height: 48px;
+  background: linear-gradient(90deg, #03a9f4, #f441f4, #ffeb3b, #03a9f4);
+  background-size: 400%;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 27px;
+}
+
+.login-menu button:hover {
+  animation-name: gradient;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .login-menu a {
@@ -154,6 +168,16 @@ input {
 
 .submit-menu p {
   display: none;
+}
+
+/* gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 /* ================================================[ 아이페드 기준 ]=========================================================== */
 @media screen and (min-width: 768px) {
@@ -195,7 +219,7 @@ input {
 
   .login-menu button {
     width: 300px;
-    height: 60px;
+    height: 50px;
   }
   .login-menu a {
     display: block;

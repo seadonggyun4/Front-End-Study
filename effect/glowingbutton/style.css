@@ -16,6 +16,7 @@ a {
   width: 200px;
   height: 60px;
   background: linear-gradient(90deg, #03a9f4, #f441f4, #ffeb3b, #03a9f4);
+  /* 배경사이즈를 x축, y축으로 4배 늘린다. */
   background-size: 400%;
   color: #fff;
   border-radius: 30px;
@@ -43,6 +44,7 @@ a:before {
   right: -5px;
   bottom: -5px;
   background: linear-gradient(90deg, #03a9f4, #f441f4, #ffeb3b, #03a9f4);
+  /* 배경사이즈를 x축, y축으로 4배 늘린다. */
   background-size: 400%;
   border-radius: 40px;
   opacity: 0;
@@ -61,6 +63,8 @@ a:hover:before {
 /* gradient animation */
 @keyframes gradient {
   0% {
+    /* 배경이미지 위치 선정 */
+    /* 4배 늘린 만큼 늘어난 그라데이션위치가 0%->400% 으로 이동하며 색상을 변경한다. */
     background-position: 0%;
   }
   100% {
