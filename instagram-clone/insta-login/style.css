@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Bitter", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   text-align: center;
 }
-
-.display-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1 {
+  font-family: "Bitter", serif;
 }
 
 button,
@@ -26,25 +24,38 @@ input {
   text-decoration: none;
 }
 
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* =================================================== [logo section] ============================================================ */
 .insta-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background-color: #091836;
+  overflow: hidden;
 }
 
 .insta-logo h1 {
-  margin-left: 50px;
+  margin-left: 10px;
   color: #fff;
-  font-size: 100px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 300;
   -webkit-box-reflect: below 1px linear-gradient(transparent 30%, #0004);
 }
 
 /* ===  LOGO background === */
 .insta {
-  width: 200px;
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
   /* insta-logo background color */
   background: radial-gradient(
     circle at 33% 100%,
@@ -54,34 +65,37 @@ input {
     #9b36b7 85%,
     #515ecf
   );
-  border-radius: 54px;
+  border-radius: 24px;
   -webkit-box-reflect: below 1px linear-gradient(transparent 50%, #0004);
 }
 
 /* ===  LOGO inner white square === */
 .insta-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 150px;
-  height: 150px;
-  border: 13px solid #fff;
-  border-radius: 54px;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #fff;
+  border-radius: 14px;
 }
 /* ===  LOGO inner little circle === */
 .insta-inner::after {
   content: "";
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 15px;
-  height: 15px;
+  top: 5px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
   background: #fff;
   border-radius: 50%;
 }
 /* ===  LOGO inner white square2 === */
 .insta-inner2 {
-  width: 80px;
-  height: 80px;
-  border: 13px solid #fff;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #fff;
   border-radius: 50%;
 }
 /* ================================================[ login-nav section ]=========================================================== */
@@ -90,8 +104,9 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  padding: 20px 20px;
+  width: 100%;
+  height: 60vh;
   background-color: #fafafa;
 }
 
@@ -100,24 +115,19 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
+  border-radius: 10px;
 }
 
 .login-menu h1 {
-  font-size: 40px;
-  font-weight: 500;
+  display: none;
 }
-
-.login-menu form {
-  margin-top: 50px;
-}
-
 .login-menu input {
   padding: 10px;
-  width: 300px;
-  height: 40px;
+  width: 250px;
+  height: 30px;
   background-color: #fafafa;
   border: gainsboro;
   border-radius: 3px;
@@ -125,13 +135,13 @@ input {
 }
 
 .login-menu input:last-child {
-  margin-top: 7px;
+  margin-top: 15px;
 }
 
 .login-menu button {
-  margin-top: 20px;
-  width: 300px;
-  height: 35px;
+  margin-top: 70px;
+  width: 200px;
+  height: 30px;
   background-color: #66c4e3;
   color: #fff;
   border-radius: 3px;
@@ -139,47 +149,118 @@ input {
 }
 
 .login-menu a {
-  margin-top: 35px;
-  color: #515ecf;
-  font-weight: 700;
-}
-
-.login-menu a:last-child {
-  margin-top: 25px;
-  color: #000;
-  font-size: 12px;
-  font-weight: 800;
-}
-.submit-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  width: 400px;
-  height: 100px;
-  background-color: #fff;
-}
-
-.submit-menu a {
-  display: inline-block;
-  color: #515ecf;
-  font-size: 20px;
-  font-weight: 700;
+  display: none;
 }
 
 .submit-menu p {
-  font-size: 15px;
-  font-weight: 700;
+  display: none;
 }
+/* ================================================[ 아이페드 기준 ]=========================================================== */
+@media screen and (min-width: 768px) {
+  /* ===== 로그인 로고 ===== */
+  .insta-logo h1 {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 300;
+  }
+  .insta {
+    width: 150px;
+    height: 150px;
+    border-radius: 44px;
+  }
+  .insta-inner {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #fff;
+    border-radius: 44px;
+  }
+  .insta-inner::after {
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+  }
+  .insta-inner2 {
+    width: 60px;
+    height: 60px;
+    border: 8px solid #fff;
+  }
+  /* ===== 로그인 창 ===== */
 
-@media screen and (min-width: 1240px) {
-  body {
+  .login-menu input {
+    width: 300px;
+    height: 50px;
+  }
+
+  .login-menu button {
+    width: 300px;
+    height: 60px;
+  }
+  .login-menu a {
+    display: block;
+  }
+  .login-menu a {
+    margin-top: 35px;
+    color: #515ecf;
+    font-weight: 700;
+  }
+
+  .login-menu a:last-child {
+    margin-top: 25px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .submit-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .submit-menu a {
+    display: inline-block;
+    color: #515ecf;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .submit-menu p {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+/* ================================================[ 윈도우 스크린 기준 ]=========================================================== */
+@media screen and (min-width: 1200px) {
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  /* ===== 로그인 로고 ===== */
+  .insta-logo {
+    width: 75vw;
+    height: 100vh;
+  }
+
   .login-nav {
-    width: 600px;
+    padding: 0 0;
+    width: 25vw;
+    height: 100vh;
+  }
+  .login-menu h1 {
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .login-menu form {
+    margin-top: 30px;
   }
 }
