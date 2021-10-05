@@ -24,7 +24,7 @@ body {
   /* ??????? */
   transform-style: preserve-3d;
 }
-
+/* ==================== [card box design]  ==================== */
 .container .box {
   position: relative;
   margin: 40px;
@@ -35,7 +35,7 @@ body {
   /* ??????? */
   transform-style: preserve-3d;
 }
-
+/* ===== Nike text content ===== */
 .container .box::before {
   content: "Nike";
   position: absolute;
@@ -48,7 +48,7 @@ body {
   transition: 0.5s;
   opacity: 0;
 }
-
+/* ===== SHOES text content ===== */
 .container .box::after {
   content: "SHOES";
   position: absolute;
@@ -66,7 +66,8 @@ body {
 .container .box:hover:after {
   opacity: 0.04;
 }
-
+/* ==================== [card box content design]  ==================== */
+/* ===== product name ===== */
 .container .box .name {
   z-index: 10;
   position: absolute;
@@ -85,7 +86,7 @@ body {
   top: 40px;
   opacity: 1;
 }
-
+/* ===== buy button ===== */
 .container .box .buy {
   z-index: 10;
   position: absolute;
@@ -107,6 +108,7 @@ body {
   opacity: 1;
 }
 
+/* ===== circle effect ===== */
 .container .box .circle {
   z-index: 10;
   position: absolute;
@@ -121,7 +123,18 @@ body {
   transition: 0.5s;
   opacity: 1;
 }
+/* ===== chose color of circle, buy button ===== */
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy {
+  background: #fb4b4f;
+}
 
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy {
+  background: #379bf7;
+}
+
+/* ===== product ===== */
 .container .box .product {
   z-index: 11;
   position: absolute;
@@ -131,16 +144,6 @@ body {
   transform-style: preserve-3d;
   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
   transition: 0.5s;
-}
-
-.container .box:nth-child(2) .circle,
-.container .box:nth-child(2) .buy {
-  background: #fb4b4f;
-}
-
-.container .box:nth-child(3) .circle,
-.container .box:nth-child(3) .buy {
-  background: #379bf7;
 }
 
 .container .box:hover .product {
