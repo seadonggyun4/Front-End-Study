@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  /* ??????? */
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  margin: 40px;
+  width: 300px;
+  height: 400px;
+  background: #232323;
+  border-radius: 20px;
+  /* ??????? */
+  transform-style: preserve-3d;
+}
+
+.container .box::before {
+  content: "Nike";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 6em;
+  font-weight: 900;
+  font-style: italic;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box::after {
+  content: "SHOES";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 900;
+  font-style: italic;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box:hover:before,
+.container .box:hover:after {
+  opacity: 0.04;
+}
+
+.container .box .name {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+
+.container .box .buy {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 10px 25px;
+  color: #fff;
+  background: #111;
+  border-radius: 30px;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box:hover .buy {
+  bottom: 40px;
+  opacity: 1;
+}
+
+.container .box .circle {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: #111;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.container .box .product {
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+  transition: 0.5s;
+}
+
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy {
+  background: #fb4b4f;
+}
+
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy {
+  background: #379bf7;
+}
+
+.container .box:hover .product {
+  transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
