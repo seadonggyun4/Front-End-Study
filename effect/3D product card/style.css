@@ -21,8 +21,10 @@ body {
   align-items: center;
   flex-wrap: wrap;
   width: 1200px;
-  /* ??????? */
-  transform-style: preserve-3d;
+  /* transform-style : 3D 공간에서 변경된 3차원 좌표를 하위 요소에게 전달할 것인지의 여부를 결정하는 속성 */
+  /* flat : 하위요소들은 상위요소늬 3D좌표와 상관없이 2D영역에 표시된다. */
+  /* preserve-3d : 부모요소의 3D 좌표를 전달받아 3D 형태로 표현된다.  */
+  /* transform-style: preserve-3d; */
 }
 /* ==================== [card box design]  ==================== */
 .container .box {
@@ -32,7 +34,6 @@ body {
   height: 400px;
   background: #232323;
   border-radius: 20px;
-  /* ??????? */
   transform-style: preserve-3d;
 }
 /* ===== Nike text content ===== */
@@ -77,6 +78,9 @@ body {
   color: #fff;
   text-align: center;
   transform-style: preserve-3d;
+  /* translate3d() : 현재 위치에서 해당 요소를 주어진 x축, y축 , z축 의 거리만큼 이동시킨다. */
+  /* perspective() 메소드를 사용하여 원근감을 표현 가능하다. */
+  /* 예시 =>  transform: perspective(500px) translate3d(0, 0, 75px); */
   transform: translate3d(0, 0, 75px);
   transition: 0.5s;
   opacity: 0;
