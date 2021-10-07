@@ -1,3 +1,8 @@
+// menuToggle : 토글 버튼
+// navigation : navigation menu
+// list : 메뉴 목록
+
+// ========================================================================================================
 let menuToggle = document.querySelector(".toggle");
 let navigation = document.querySelector(".navigation");
 menuToggle.onclick = function () {
