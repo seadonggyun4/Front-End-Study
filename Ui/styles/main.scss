@@ -1,11 +1,14 @@
-$color: blue;
+$color: #0081ff;
 
 h1 {
   color: $color;
 }
+
 p {
+  display: block;
   color: $color;
 }
+
 .bg {
   background-color: $color;
 }

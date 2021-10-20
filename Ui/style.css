@@ -1,13 +1,14 @@
 h1 {
-  color: blue;
+  color: #0081ff;
 }
 
 p {
-  color: blue;
+  display: block;
+  color: #0081ff;
 }
 
 .bg {
-  background-color: blue;
+  background-color: #0081ff;
 }
 
 /*# sourceMappingURL=style.css.map */
