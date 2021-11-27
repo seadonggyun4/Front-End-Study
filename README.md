@@ -53,9 +53,13 @@
 <br>
 <br>
 
-# [🌱 Effect]
-
-
+# [🌱 UI Effect]
+<div>
+<img src="https://user-images.githubusercontent.com/84368302/143670717-334ab23d-cfe2-4ec8-8620-e446a150519a.gif" alt="drawing" width="400"/>
+<img src="https://user-images.githubusercontent.com/84368302/143670784-306390e2-b633-49fa-9223-4c647da30dd6.gif" width="400"/>
+<img src="https://user-images.githubusercontent.com/84368302/143670856-4243cdc6-94e1-4f45-9237-f447ea8155e7.gif" width="400"/>
+<img src="https://user-images.githubusercontent.com/84368302/143670868-25c89c6e-d725-405b-8738-077b48fef15a.gif" width="400"/>
+</div>
 
 
 
