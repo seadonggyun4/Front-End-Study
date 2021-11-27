@@ -87,7 +87,7 @@ Css 의 animation, transition과 javascript를 사용해 웹의 다양한 효과
 ## 1.Shoping web(js) 이란?
 javascript & jQuery 의 HTML UI동작과 AJAX 요청을 통해 간단한 쇼핑사이트를 구현
 
-- 사용기술: 
+- 사용기술: Javascript / HTML / CSS
 
 ## 2. 배운점
 - DOM(Document Object Model)의 개념학습
