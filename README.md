@@ -1,17 +1,25 @@
 ﻿# Front-End-Study
-# [Css Project]
+# [🌱 Responsive web]
 <img width="534" alt="cssproject" src="https://user-images.githubusercontent.com/84368302/131813953-d71cfd95-f9cd-4b53-9f07-da875c08ef63.PNG">
 
-## 1.CSS Project란?
-* 피그마 파일을 통해 반응형 웹페이지 구현
-## 2.직접 해본 CSS Project 문제점
+## 1.Responsive web 이란?
+피그마 시안을 통해 반응형 웹페이지를 구현
+
+- 사용기술 : HTML / CSS
+<br>
+<br>
+
+
+## 2.마주한 문제점
 1.태그 hover 타겟팅 범위 확장 <br/>
 2.반응형으로 이미지를 감췄다 나타나게 하는법 <br/>
 3.구조적인 작성법의 부족함(태그관리, 시멘틱 작성) <br/>
 4.부트스트랩 그리드 사용법 <br/>
 5.반응형 웹 작성법 <br/>
+<br>
+<br>
 
-## 3. CSS Project
+## 3. 문제점 해결 방법
 1.태그 hover 타겟팅 범위 확장
   * css 선택자를 통해 간단하게 범위 확장이 가능하다. <br/>
   ```css
@@ -41,7 +49,11 @@
  
 5.반응형 웹 작성법<br/>
  * 모바일 → 웹 순으로 작성하는편이 쉽고 간결하게 작성가능하다.<br/>
+<br>
+<br>
+<br>
 
+# [🌱 Effect]
 
 
 
