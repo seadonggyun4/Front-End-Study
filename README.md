@@ -1,4 +1,4 @@
-﻿# Front-End-Study
+﻿﻿# Front-End-Study
 # [🌱 Responsive web]
 <img width="534" alt="cssproject" src="https://user-images.githubusercontent.com/84368302/131813953-d71cfd95-f9cd-4b53-9f07-da875c08ef63.PNG">
 
@@ -57,11 +57,28 @@
 <div>
 <img src="https://user-images.githubusercontent.com/84368302/143670717-334ab23d-cfe2-4ec8-8620-e446a150519a.gif" alt="drawing" width="350"/>
 <img src="https://user-images.githubusercontent.com/84368302/143670784-306390e2-b633-49fa-9223-4c647da30dd6.gif" width="300"/>
-<img src="https://user-images.githubusercontent.com/84368302/143670856-4243cdc6-94e1-4f45-9237-f447ea8155e7.gif" width="300"/>
- <img src="https://user-images.githubusercontent.com/84368302/143671078-8850a005-6ea3-40aa-8a7c-0ea9855f5b54.gif" width="300"/>
+<img src="https://user-images.githubusercontent.com/84368302/143670856-4243cdc6-94e1-4f45-9237-f447ea8155e7.gif" width="350"/>
 <img src="https://user-images.githubusercontent.com/84368302/143670868-25c89c6e-d725-405b-8738-077b48fef15a.gif" width="300"/>
-<img src="https://user-images.githubusercontent.com/84368302/143671077-bd72e2fd-ae2d-4d7f-904f-f6b8b162cd8a.gif" width="300"/>
+
+<img src="https://user-images.githubusercontent.com/84368302/143671077-bd72e2fd-ae2d-4d7f-904f-f6b8b162cd8a.gif" width="650"/>
 
 </div>
+<br>
 
+## 1.UI Effect 이란?
+Css 의 animation, transition과 javascript를 사용해 웹의 다양한 효과와 UI를 구현
+- 사용기술 : HTML / CSS / javascript
+<br>
+<br>
+
+## 2. 배운점
+- 웹의 UI 구성요소를 파악
+- css animation / transition 의 사용범 숙지
+- SVG 이미지 파일로 animaiton 만들기
+- 다양한 javascript 라이브러리를 활용한 효과적용
+- responsive UI 구성요소 구축법
+
+
+<br>
+<br>
 
