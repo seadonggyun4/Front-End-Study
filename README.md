@@ -77,8 +77,23 @@ Css 의 animation, transition과 javascript를 사용해 웹의 다양한 효과
 - SVG 이미지 파일로 animaiton 만들기
 - 다양한 javascript 라이브러리를 활용한 효과적용
 - responsive UI 구성요소 구축법
-
-
 <br>
 <br>
+<br>
 
+# [🌱 Shoping web(js) ]
+
+<br>
+
+## 1.Shoping web(js) 이란?
+javascript & jQuery 의 HTML UI동작과 AJAX 요청을 통해 간단한 쇼핑사이트를 구현
+
+## 2. 배운점
+- DOM(Document Object Model)의 개념학습
+- javascrpit의 변수,셀렉터,조건문,반복문,함수,자료형
+- 웹 페이지 UI 조작방법
+- JQuery 라이브러리 사용
+- AJAx 요청을 통한 데이터 바인딩
+- SCroll 애니메이션
+- 캐러셀(이미지 슬라이드) / 슬라이드 터치기능
+- 이메일 형식검사 및 UI
