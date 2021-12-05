@@ -1,4 +1,4 @@
-//[========== Dom api ===========]
+//[========== Dom api & forEach ===========]
 //queryselectorAll은 해당하는요소를 모두 찾아낸다.
 //querySelector는 해당하는요소중 가장 첫번째로 읽힌것을 찾아낸다.
 const boxEls = document.querySelectorAll('.box');
