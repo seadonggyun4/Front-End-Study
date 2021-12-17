@@ -59,7 +59,6 @@
 <img src="https://user-images.githubusercontent.com/84368302/143670784-306390e2-b633-49fa-9223-4c647da30dd6.gif" width="300"/>
 <img src="https://user-images.githubusercontent.com/84368302/143670856-4243cdc6-94e1-4f45-9237-f447ea8155e7.gif" width="350"/>
 <img src="https://user-images.githubusercontent.com/84368302/143670868-25c89c6e-d725-405b-8738-077b48fef15a.gif" width="300"/>
-
 <img src="https://user-images.githubusercontent.com/84368302/143671077-bd72e2fd-ae2d-4d7f-904f-f6b8b162cd8a.gif" width="650"/>
 
 </div>
@@ -82,11 +81,13 @@ Css 의 animation, transition과 javascript를 사용해 웹의 다양한 효과
 <br>
 
 # [🌱 Shoping web(js) ]
-
+<img src="https://user-images.githubusercontent.com/84368302/143674218-1dd011f2-c350-4f8f-a402-c3c2aa0e6025.PNG" width="650"/>
 <br>
 
 ## 1.Shoping web(js) 이란?
 javascript & jQuery 의 HTML UI동작과 AJAX 요청을 통해 간단한 쇼핑사이트를 구현
+
+- 사용기술: Javascript / HTML / CSS
 
 ## 2. 배운점
 - DOM(Document Object Model)의 개념학습
