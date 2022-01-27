@@ -9,10 +9,6 @@ cardEls.forEach(function(cardEl){
     x = e.pageX - left1,
     y = e.pageY - top1;
 
-    // spanEls.forEach(function(spanEl){
-    //   spanEl.setAttribute('style',`top:${y}, left:${x}` )
-    //   console.log(spanEl)
-    // })
     console.log($(this))
     console.log(this)
 
@@ -25,12 +21,7 @@ cardEls.forEach(function(cardEl){
 
     x = e.pageX - left2,
     y = e.pageY - top2;
-    
 
-    // spanEls.forEach(function(spanEl){
-    //   spanEl.setAttribute('style',`top:${y}, left:${x}` )
-    //   console.log(spanEl)
-    // })
     $(this).find('span').css({top:y, left:x})
   })
 })

@@ -71,7 +71,7 @@ body
   color: #111;
   visibility: hidden;
   opacity: 0;
-  transition: margin-top .5s ease-in-out, opacity 1s ease-in-out;
+  transition: margin-top .5s ease-in-out, opacity .8s ease-in-out;
 }
 
 .container .card:hover .content
