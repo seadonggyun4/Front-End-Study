@@ -14,9 +14,35 @@ body{
 
 footer{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 50px;
   width: 100%;
   min-height: 100px;
   background:#3586ff;
-  
+}
+
+footer .social_icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+footer .social_icon li{
+  list-style: none;
+}
+
+footer .social_icon li a{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 2em;
+  color: #fff;
+  transition: .5s;
+}
+
+footer .social_icon li a:hover{
+  transform: translateY(-10px);
 }
