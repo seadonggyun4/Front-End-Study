@@ -15,6 +15,7 @@ body{
 footer{
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 50px;
@@ -23,7 +24,9 @@ footer{
   background:#3586ff;
 }
 
-footer .social_icon{
+footer .social_icon,
+footer .menu
+{
   position: relative;
   display: flex;
   justify-content: center;
@@ -31,7 +34,8 @@ footer .social_icon{
   margin: 10px 0;
 }
 
-footer .social_icon li{
+footer .social_icon li,
+footer .menu li{
   list-style: none;
 }
 
@@ -45,4 +49,17 @@ footer .social_icon li a{
 
 footer .social_icon li a:hover{
   transform: translateY(-10px);
+}
+
+footer .menu  li a{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: .5s;
+}
+footer .menu li a:hover{
+  opacity: 1;
 }
