@@ -63,3 +63,10 @@ footer .menu  li a{
 footer .menu li a:hover{
   opacity: 1;
 }
+footer p{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
